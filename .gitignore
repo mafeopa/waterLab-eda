@@ -1,0 +1,25 @@
+# Entornos virtuales y artefactos de Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Datos crudos: no se versionan (pesan y cambian). Su origen está en el README.
+data/*.csv
+!data/diccionario.csv
+
+# Salidas generadas por la ejecución
+salidas/*
+!salidas/.gitkeep
+
+# Credenciales: nunca deben entrar al historial
+.env
+*.key
+*.pem
+
+# Sistema operativo
+.DS_Store
+Thumbs.db

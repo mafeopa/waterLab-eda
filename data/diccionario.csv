@@ -1,0 +1,11 @@
+variable,descripcion,unidad,rango_referencia
+pH,Medida de acidez o alcalinidad del agua,unidades de pH,6.5 – 8.5
+Dureza,Concentración de sales de calcio y magnesio,mg/L,—
+Sólidos,Sólidos disueltos totales,ppm,—
+Cloraminas,Desinfectante residual derivado del cloro,ppm,0 – 4
+Sulfatos,Concentración de sulfatos,mg/L,—
+Conductividad,Conductividad eléctrica,µS/cm,—
+Carbono_orgánico,Carbono orgánico total,ppm,—
+Trihalometanos,Subproductos de la cloración,µg/L,0 – 80
+Turbidez,Cantidad de materia en suspensión,NTU,0 – 5
+Potabilidad,"Etiqueta: 1 potable, 0 no potable",categoría,—

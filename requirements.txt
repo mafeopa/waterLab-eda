@@ -1,0 +1,7 @@
+# Entorno de la Unidad 1 — versiones fijas para que el resultado sea reproducible.
+# Generado con: pip freeze  (Python 3.13)
+numpy==2.5.3
+pandas==3.0.5
+polars==1.44.2
+jupyterlab==4.6.6
+nbconvert==7.17.2

@@ -1,0 +1,33 @@
+# Dos formas de ejecutar el mismo proyecto sobre la misma imagen.
+#   docker compose run --rm perfilar     -> ejecuta el script y termina
+#   docker compose up jupyter            -> abre JupyterLab en el navegador
+services:
+
+  perfilar:
+    build: .
+    image: pa-u1-perfilamiento:1.0
+    container_name: pa-u1-perfilar
+    volumes:
+      # Los datos viven fuera de la imagen y entran de solo lectura.
+      - ./data:/app/data:ro
+      - ./salidas:/app/salidas
+    command: ["python", "src/perfilamiento_agua.py"]
+
+  jupyter:
+    build: .
+    image: pa-u1-perfilamiento:1.0
+    container_name: pa-u1-jupyter
+    ports:
+      # Atado a 127.0.0.1: el servicio solo es accesible desde este computador.
+      - "127.0.0.1:8888:8888"
+    volumes:
+      # El proyecto completo, para que lo que se edite en el cuaderno se guarde en disco.
+      - .:/app
+    command:
+      - jupyter
+      - lab
+      - --ip=0.0.0.0
+      - --port=8888
+      - --no-browser
+      - --allow-root
+      - --IdentityProvider.token=
